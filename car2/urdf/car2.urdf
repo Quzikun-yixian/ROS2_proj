@@ -85,7 +85,7 @@
     </collision>
   </link>
   <joint
-    name="castwheel"
+    name="castwheel_joint"
     type="continuous">
     <origin
       xyz="-0.0164468565720474 -0.00527324448375706 -0.025"
@@ -138,7 +138,7 @@
     </collision>
   </link>
   <joint
-    name="leftwheel"
+    name="leftwheel_joint"
     type="continuous">
     <origin
       xyz="0.055 -0.110423702246605 -0.035"
@@ -191,7 +191,7 @@
     </collision>
   </link>
   <joint
-    name="rightwheel"
+    name="rightwheel_joint"
     type="continuous">
     <origin
       xyz="0.055 0.110423702246602 -0.035"
@@ -372,8 +372,8 @@
     <axis
       xyz="1 0 0" />
     <limit
-      lower="0"
-      upper="0.26"
+      lower="-0.26"
+      upper="0"
       effort="0"
       velocity="1.5" />
   </joint>
@@ -546,8 +546,8 @@
     <axis
       xyz="0 0.99998 0.0057829" />
     <limit
-      lower="0"
-      upper="0.05"
+      lower="-0.05"
+      upper="0"
       effort="0"
       velocity="1.01" />
   </joint>
