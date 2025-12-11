@@ -1,0 +1,17 @@
+# car2/config/bridge.yaml
+# Bridge joint command & state for fin1, fin2
+
+- topic_name: "/model/car2/joint/fin1/cmd_pos"
+  ros_topic_name: "/car2/fin1/command"
+  ros_type_name: "std_msgs/msg/Float64"
+  direction: ROS_TO_GZ
+
+- topic_name: "/model/car2/joint/fin2/cmd_pos"
+  ros_topic_name: "/car2/fin2/command"
+  ros_type_name: "std_msgs/msg/Float64"
+  direction: ROS_TO_GZ
+
+- topic_name: "/model/car2/joint_state"
+  ros_topic_name: "/joint_states"
+  ros_type_name: "sensor_msgs/msg/JointState"
+  direction: GZ_TO_ROS
