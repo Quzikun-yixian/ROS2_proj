@@ -43,6 +43,22 @@ def generate_launch_description():
         create_own_container='False',
         use_composition='True',
     )
+    camera_bridge_image = Node(
+        package='ros_gz_image',
+        executable='image_bridge',
+        name='bridge_gz_ros_camera_image',
+        output='screen',
+        parameters=[{'use_sim_time': True}],
+        arguments=['/depth_camera/image'],
+    )
+    camera_bridge_depth = Node(
+        package='ros_gz_image',
+        executable='image_bridge',
+        name='bridge_gz_ros_camera_depth',
+        output='screen',
+        parameters=[{'use_sim_time': True}],
+        arguments=['/depth_camera/depth_image'],
+    )
     spawn_entity = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(gz_spawn_model_launch_source),
         launch_arguments={
@@ -71,4 +87,6 @@ def generate_launch_description():
         ros_gz_bridge,
         spawn_entity,
         robot_localization_node,
+        camera_bridge_image,
+        camera_bridge_depth,
     ])
