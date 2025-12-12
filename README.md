@@ -1,7 +1,7 @@
 Please focus on the "odom.launch.py" file in the "launch" directory, because nav2 is now integrated and it is the only way you can launch the simulation with nav2!
 ```
-colcon build  
-source install/setup.bash  
+colcon build
+source install/setup.bash
 ros2 launch car2 odom.launch.py
 ``` 
 
